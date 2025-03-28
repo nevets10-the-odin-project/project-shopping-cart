@@ -1,10 +1,11 @@
 import "./App.css";
-import { Link } from "react-router-dom";
+import Navigation from "./components/Navigation";
 
 function App() {
 	return (
 		<>
-			<Link to="shopping-cart">shopping cart</Link>
+			<Navigation />
+			<h1>HOME</h1>
 		</>
 	);
 }

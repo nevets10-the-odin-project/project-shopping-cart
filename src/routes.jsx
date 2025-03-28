@@ -10,10 +10,12 @@ const routes = [
 	{
 		path: "shopping",
 		element: <Shopping />,
-	},
-	{
-		path: "shopping-cart",
-		element: <ShoppingCart />,
+		children: [
+			{
+				path: "cart",
+				element: <ShoppingCart />,
+			},
+		],
 	},
 ];
 

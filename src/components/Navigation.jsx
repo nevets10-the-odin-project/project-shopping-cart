@@ -7,7 +7,6 @@ export default function Navigation() {
 		<div className={styles.nav}>
 			<Link to="/">Home</Link>
 			<Link to="/shopping">Shopping</Link>
-			<Link to="/shopping-cart">Shopping Cart</Link>
 		</div>
 	);
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "./Navigation";
 
-export default function Shopping() {
+export default function Shop() {
 	return (
 		<>
 			<Navigation />
-			<h1>Shopping</h1>
+			<h1>Shop</h1>
 		</>
 	);
 }

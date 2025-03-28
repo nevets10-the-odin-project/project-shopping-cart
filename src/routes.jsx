@@ -1,5 +1,5 @@
 import App from "./App";
-import Shopping from "./components/Shopping";
+import Shop from "./components/Shop";
 import ShoppingCart from "./components/ShoppingCart";
 
 const routes = [
@@ -8,8 +8,8 @@ const routes = [
 		element: <App />,
 	},
 	{
-		path: "shopping",
-		element: <Shopping />,
+		path: "shop",
+		element: <Shop />,
 		children: [
 			{
 				path: "cart",

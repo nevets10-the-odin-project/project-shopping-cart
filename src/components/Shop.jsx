@@ -16,7 +16,7 @@ export default function Shop() {
 			<Navigation />
 			<h1>Shop</h1>
 			{items.length > 0 &&
-				items.map((item) => <ItemCard id={item.id} item={item} />)}
+				items.map((item) => <ItemCard key={item.id} item={item} />)}
 		</>
 	);
 }

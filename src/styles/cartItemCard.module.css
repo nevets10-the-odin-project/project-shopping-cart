@@ -1,0 +1,14 @@
+.cartItemCard {
+	display: grid;
+	grid-template-columns: 0.2fr 1fr;
+	gap: 1rem;
+}
+
+.cartItemCard img {
+	max-height: 100px;
+	margin-left: auto;
+}
+
+.details {
+	margin-right: auto;
+}

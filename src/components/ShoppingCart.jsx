@@ -1,14 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import CartItemCard from "./CartItemCard";
+import styles from "../styles/cart.module.css";
 
 export default function ShoppingCart({ cart }) {
 	return (
-		<div>
+		<div className={styles.cart}>
 			{cart.map((item) => (
-				<div key={item.id}>
-					{item.title} x{item.count}
-				</div>
+				<CartItemCard key={item.id} item={item} />
 			))}
 		</div>
 	);

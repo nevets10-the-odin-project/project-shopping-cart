@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/shop.module.css";
 import Navigation from "./Navigation";
 import ItemCard from "./ItemCard";
+import ShoppingCart from "./ShoppingCart";
+import { useHref } from "react-router-dom";
 
 export default function Shop() {
 	const [items, setItems] = useState([]);
 	const [cart, setCart] = useState([]);
-	console.log(cart);
+	const href = useHref();
+
 	function handleAddToCart(item) {
 		const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 		console.log(existingItem);
@@ -24,16 +27,20 @@ export default function Shop() {
 	return (
 		<>
 			<Navigation cartCount={cart.length} />
-			<div className={styles.itemList}>
-				{items.length > 0 &&
-					items.map((item) => (
-						<ItemCard
-							key={item.id}
-							item={item}
-							handleAddToCart={(count) => handleAddToCart({ id: item.id, count })}
-						/>
-					))}
-			</div>
+			{href.includes("cart") ? (
+				<ShoppingCart />
+			) : (
+				<div className={styles.itemList}>
+					{items.length > 0 &&
+						items.map((item) => (
+							<ItemCard
+								key={item.id}
+								item={item}
+								handleAddToCart={(count) => handleAddToCart({ id: item.id, count })}
+							/>
+						))}
+				</div>
+			)}
 		</>
 	);
 }

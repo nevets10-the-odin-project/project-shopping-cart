@@ -12,7 +12,6 @@ export default function Shop() {
 
 	function handleAddToCart(item) {
 		const existingItem = cart.find((cartItem) => cartItem.id === item.id);
-		console.log(existingItem);
 		if (existingItem) return;
 
 		const newCart = [...cart, item];

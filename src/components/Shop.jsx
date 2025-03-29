@@ -18,6 +18,11 @@ export default function Shop() {
 		setCart(newCart);
 	}
 
+	function handleRemoveFromCart(itemId) {
+		const newCart = cart.filter((item) => item.id !== itemId);
+		setCart(newCart);
+	}
+
 	useEffect(() => {
 		fetch("https://fakestoreapi.com/products")
 			.then((response) => response.json())
@@ -27,7 +32,7 @@ export default function Shop() {
 		<>
 			<Navigation cartCount={cart.length} />
 			{href.includes("cart") ? (
-				<ShoppingCart cart={cart} />
+				<ShoppingCart cart={cart} deleteItem={(id) => handleRemoveFromCart(id)} />
 			) : (
 				<div className={styles.itemList}>
 					{items.length > 0 &&

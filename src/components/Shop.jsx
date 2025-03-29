@@ -28,7 +28,7 @@ export default function Shop() {
 		<>
 			<Navigation cartCount={cart.length} />
 			{href.includes("cart") ? (
-				<ShoppingCart />
+				<ShoppingCart cart={cart} />
 			) : (
 				<div className={styles.itemList}>
 					{items.length > 0 &&
@@ -36,7 +36,7 @@ export default function Shop() {
 							<ItemCard
 								key={item.id}
 								item={item}
-								handleAddToCart={(count) => handleAddToCart({ id: item.id, count })}
+								handleAddToCart={(count) => handleAddToCart({ ...item, count })}
 							/>
 						))}
 				</div>

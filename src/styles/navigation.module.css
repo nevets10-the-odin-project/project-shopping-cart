@@ -12,6 +12,8 @@
 	padding: 1rem 2rem;
 	transition: 0.25s background-color;
 	font-size: 24px;
+	display: flex;
+	align-items: center;
 }
 
 .nav a:hover {

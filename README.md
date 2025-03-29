@@ -4,24 +4,6 @@ https://www.theodinproject.com/lessons/react-new-shopping-cart
 
 ---
 
-## Brainstorming
-
-Gonna try CSS Module
-
-### Components
-1. Item card
-    - Item name, price, image, "Add to cart" button
-1. shopping cart
-1. Nav bar(?)
-
-### Pages
-1. Home page
-1. Shop page
-1. Shopping cart page
-1. Fake checkout page(?)
-
----
-
 ### Introduction
 
 By now you've come far from your React-baby days. You have tools like routers and testing frameworks under your belt but you still have a long way to go. Now is a great time to put these concepts to use with a classic project - a mock shopping cart.
@@ -42,3 +24,31 @@ By now you've come far from your React-baby days. You have tools like routers an
 1. Make sure to test your app thoroughly using the React Testing Library. Be careful not to test `react-router-dom` directly, since it is an external library and the developers working on it must have tested the library already.
 1. As usual, style your application so you can show it off! You have a host of options provided already.
 1. Lastly, it's time to deploy it! Depending on what hosting solution you're using, you may need some additional configuration so that your routing is handled correctly as a single page application (SPA).
+
+---
+
+## Brainstorming
+
+Gonna try CSS Module
+
+### Components
+1. Item card
+    - Item name, price, image, "Add to cart" button
+1. shopping cart
+1. Nav bar(?)
+
+### Pages
+1. Home page
+1. Shop page
+1. Shopping cart page
+1. Fake checkout page(?)
+
+---
+
+## Post-project Review
+
+This project was a lot like the previous one, Memory Card. The workflow that React uses is really nice to break up bigger components into smaller, encapsulated, pieces. I can just focus on one thing at a time and not worry about some other component breaking.
+
+I like CSS Module. Not having to worry about class names was pretty nice, but I was still finding myself using unique names for the most part since I've gotten used to doing that. I'm also interested in Tailwind, but TOP encourages sticking with writing vanilla CSS by hand while going through the lessons, so I'll probably hold off for now.
+
+The propType functionality was depreciated in React v19, the latest version as of March of 2025, so I didn't end up using it. The React docs just say to use something else like Typescript.

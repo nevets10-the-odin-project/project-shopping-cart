@@ -1,0 +1,8 @@
+.itemCard {
+	display: flex;
+	flex-direction: column;
+}
+
+.itemCard img {
+	max-width: 100px;
+}

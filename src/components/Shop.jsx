@@ -6,7 +6,7 @@ import ItemCard from "./ItemCard";
 export default function Shop() {
 	const [items, setItems] = useState([]);
 	const [cart, setCart] = useState([]);
-
+	console.log(cart);
 	function handleAddToCart(item) {
 		const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 		console.log(existingItem);
@@ -30,7 +30,7 @@ export default function Shop() {
 						<ItemCard
 							key={item.id}
 							item={item}
-							handleAddToCart={() => handleAddToCart({ id: item.id, count: 1 })}
+							handleAddToCart={(count) => handleAddToCart({ id: item.id, count })}
 						/>
 					))}
 			</div>

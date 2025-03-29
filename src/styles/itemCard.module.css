@@ -19,13 +19,17 @@
 
 .priceBuy {
 	display: flex;
+	align-items: flex-start;
+}
+
+.priceBuy input {
+	margin-left: auto;
+	margin-right: 1rem;
 }
 
 .priceBuy button {
 	padding: 0.25rem 0.5rem;
 	border: none;
-	margin-left: auto;
-	margin-right: 1rem;
 	cursor: pointer;
 }
 

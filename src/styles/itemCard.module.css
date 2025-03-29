@@ -1,8 +1,29 @@
 .itemCard {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 10px;
+	transition: background-color 0.1s;
+}
+
+.itemCard:hover {
+	background-color: lightgrey;
+	cursor: pointer;
 }
 
 .itemCard img {
-	max-width: 100px;
+	max-height: 100px;
+}
+
+.title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+.description {
+	max-height: 4.5rem;
+	overflow: hidden;
 }

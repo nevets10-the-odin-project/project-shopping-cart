@@ -4,7 +4,7 @@ import { Link, useHref } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiCartVariant } from "@mdi/js";
 
-export default function Navigation() {
+export default function Navigation({ cartCount = 0 }) {
 	const href = useHref();
 
 	return (
@@ -14,6 +14,7 @@ export default function Navigation() {
 
 			{href.includes("shop") && (
 				<Link to="/shop/cart">
+					{cartCount}
 					<Icon path={mdiCartVariant} title="cart" size={1.4} />
 				</Link>
 			)}
